@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react"
+import axios from "axios";
 
 function App() {
 
+  const API_URL = import.meta.env.VITE_API_URL;
   const [cript, setCript] = useState();
 
   useEffect(()=>{
-    fetch("https://api.coincap.io/v2/assets")
-    .then((resp) => resp.json())
+    axios.get(`${API_URL}assets`)
     .then((data) => {
-      setCript(data.data);
+      console.log(data)
+      setCript(data.data.data);
      
     })
     .catch(()=>{
@@ -22,8 +24,8 @@ function App() {
     <>
      <h2>Lista de criptomonedas</h2>
      <ol>
-      {cript.map(({name, priceUsd})=>(
-        <li>Name: {name} Price: {priceUsd}</li>
+      {cript.map(({id, name, priceUsd})=>(
+        <li key={id}>Name: {name} Price: {priceUsd}</li>
       ))}
      </ol>
     </>
