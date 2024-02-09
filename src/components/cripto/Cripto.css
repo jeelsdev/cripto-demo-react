@@ -1,0 +1,20 @@
+.container {
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.cripto-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.loading {
+    font-size: medium;
+    color: hsl(0, 0%, 55%);
+}

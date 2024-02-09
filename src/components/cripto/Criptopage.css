@@ -1,0 +1,11 @@
+.cripto-page {
+    margin: 2rem 0;
+}
+
+.cripto-page h2 {
+    border-bottom: .01rem solid hsl(0, 2%, 100%);
+}
+
+.info {
+    padding: .5rem 0;
+}
