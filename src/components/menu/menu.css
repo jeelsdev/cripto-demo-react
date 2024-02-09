@@ -1,0 +1,13 @@
+.main-menu ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0 .5rem;
+    list-style: none;
+
+}
+
+.main-menu a{
+    color: hsl(0, 50%, 100%);
+    text-decoration: none;
+}
