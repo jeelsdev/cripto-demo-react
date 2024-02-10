@@ -5,8 +5,22 @@ const Menu = () => {
     return (
         <nav className="main-menu">
             <ul>
-                <li><Link to={'/'}>Inicio</Link></li>
-                <li><Link to={'/cripto'}>Criptomonedas</Link></li>
+                <li className='main-menu-links'>
+                    <Link to={'/'}>
+                        <div className="main-menu-link">
+                            <span>Inicio</span>
+                        </div>
+                    </Link>
+                </li>
+                <li className='main-menu-links'>
+                    <Link to={'/cripto'}>
+                        <div className="main-menu-link">
+                            <span>
+                                Criptomonedas
+                            </span> 
+                        </div>
+                    </Link>
+                </li>
             </ul>
         </nav>
     )

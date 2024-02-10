@@ -1,0 +1,16 @@
+.home h2, .home p {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.home p a {
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    color: #fff;
+    background-color: hsl(180, 77%, 36%, 70%);
+}
+
+.home p a:hover {
+    background-color: hsl(180, 77%, 36%, 100%);
+}

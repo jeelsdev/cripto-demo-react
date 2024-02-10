@@ -8,7 +8,7 @@ const Grid = ({id, name, rank, symbol,changePercent24Hr, price}) => {
                 <h3 className="cripto-title">{name}</h3>
                 <p className="cripto-rank">{rank}</p>
             </div>
-            <div className="cripto-info">
+            <div className="cripto-infor">
                 <p><span className="span-title">Simbolo:</span>{symbol}</p>
                 <p>
                     <span className="span-title">Precio USD:</span>

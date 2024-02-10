@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import './Criptopage.css'
-import dayjs from "dayjs";
 
 const Criptopage = () => {
 
@@ -32,54 +31,50 @@ const Criptopage = () => {
     if(!cripto) return <span>cargando...</span>
 
     return (
-        <>
             <div className="cripto-page">
-                <h2>{cripto.name}</h2>
-                <div className="cript-page-info">
-                    <div className="info">
-                        <span>Rank:</span>    
-                        <span>{cripto.rank}</span>
-                    </div>    
-                    <div className="info">
-                        <span>Simbolo:</span>    
-                        <span>{cripto.symbol}</span>
-                    </div>    
-                    <div className="info">
-                        <span>Precio:</span>    
-                        <span>{cripto.priceUsd}</span>
-                    </div>    
-                    <div className="info">
-                        <span>Variación:</span>    
-                        <span>{cripto.changePercent24Hr}</span>
-                    </div>    
-                    <div className="info">
-                        <span>Suministro:</span>    
-                        <span>{cripto.supply}</span>
-                    </div>    
+                <div className="cripto-info">
+                    <div className="cripto-info-head">
+                        <div className="cripto-info-head-rank">
+                            <span>Ranking:</span>    
+                            <span>{cripto.rank}</span>
+                        </div>
+                        <h2>{cripto.name}</h2>  
+                        <span className="label-symbol">{cripto.symbol}</span>
+                    </div>
+                    <div className="cripto-info-body">
+                        <div className="info">
+                            <ul>
+                                <li className="info-li">Price ($): <span className="info-label">{cripto.priceUsd}</span></li>
+                                <li className="info-li">Supply: <span className="info-label">{cripto.supply}</span></li>
+                                <li className="info-li">MaxSupply: <span className="info-label">{cripto.maxSupply}</span></li>
+                                <li className="info-li">Volume 24Hr ($): <span className="info-label">{cripto.volumeUsd24Hr}</span></li>
+                                <li className="info-li">Change 24Hr (%): <span className="info-label">{cripto.changePercent24Hr}</span></li>
+                            </ul>
+                        </div>    
+                    </div>
                 </div> 
-            </div>
-            <div className="cripto-page">
-                <h2>Historial</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Precio</th>
-                        </tr> 
-                    </thead>
-                    <tbody className="nose">
-                    {history.map(({time, priceUsd, date})=>(
-                            <tr key={time}>
-                                <td>{new Date(date).toLocaleDateString()}</td>
-                                <td>{parseFloat(priceUsd)}</td>
-                            </tr>
-                        ))
-                    }
+                <div className="cripto-history">
+                    <h2>Historial</h2>
+                    <table className="history-table">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Precio</th>
+                            </tr> 
+                        </thead>
+                        <tbody>
+                        {history.map(({time, priceUsd, date})=>(
+                                <tr key={time}>
+                                    <td className="history-table-date">{new Date(date).toLocaleDateString()}</td>
+                                    <td className="history-table-price">{parseFloat(priceUsd)}</td>
+                                </tr>
+                            ))
+                        }
 
-                    </tbody>  
-                </table>
+                        </tbody>  
+                    </table>
+                </div>
             </div>
-        </>
     )
 }
 

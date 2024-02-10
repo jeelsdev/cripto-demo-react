@@ -1,11 +1,109 @@
 .cripto-page {
+    display: flex; 
+    justify-content: space-between;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.cripto-info {
+    width: 45%;
+    position: fixed;
+}
+
+.cripto-info-head {
     margin: 2rem 0;
 }
 
-.cripto-page h2 {
-    border-bottom: .01rem solid hsl(0, 2%, 100%);
+.cripto-info-head h2 {
+    margin: .3rem 0 0 0;
+    font-size: 3rem;
 }
+
+.cripto-info-head .label-symbol {
+    color: hsl(0, 2%, 90%, 70%);
+}
+
+.cripto-info-head-rank {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: .5rem;
+}
+
+.cripto-info-body {
+    border: .1rem solid hsl(0, 5%, 90%, 10%);
+    border-radius: .5rem;
+    background-color: hsl(212, 54%, 19%, 50%);
+}
+
 
 .info {
     padding: .5rem 0;
+}
+
+.info-li {
+    color: hsl(180, 80%, 50%);
+    margin: 1.3rem .2rem;
+}
+
+.info-label {
+    padding-left: .5rem;
+    color: white;
+}
+
+.cripto-history {
+    background-color: hsl(212, 54%, 19%, 50%);
+    width: 45%;    
+    border: .1rem solid hsl(0, 5%, 90%, 10%);
+    border-radius: .5rem;
+    position: absolute;
+    right: 0;
+}
+
+.cripto-history h2 {
+    text-align: center;
+    margin: .5rem auto;
+    font-size: x-large;
+}
+
+.history-table {
+    font-size: 0.9em;
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.history-table thead {
+    color: hsl(0, 50%, 100%, 70%);
+    text-align: start;    
+    font-size: small;
+}
+
+.history-table th, .history-table td {
+    padding: .8rem 0;
+}
+
+.history-table thead tr th{
+    text-align: start;
+    width: 50%;
+}
+
+.history-table tbody tr:nth-of-type(odd) {
+    background-color: hsl(0, 1%, 80%, 10%);
+}
+
+.history-table tbody td {
+    padding-left: 1rem;
+}
+
+.history-table thead th {
+    padding-left: 1.5rem;
+}
+
+.history-table-date {
+    color: hsl(180, 91%, 70%);
+}
+
+.history-table-price {
+    color: hsl(100, 80%, 70%);
 }

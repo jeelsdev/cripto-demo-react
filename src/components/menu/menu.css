@@ -1,13 +1,34 @@
+.main-menu {
+    padding: 16px 32px 2px 32px;
+    margin: 0;
+    border-bottom: .001rem solid hsl(0, 4%, 60%, 50%);
+}
+
 .main-menu ul {
     display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 0 .5rem;
+    padding-inline-start: .2rem;
+    gap: 2rem;
     list-style: none;
-
 }
 
 .main-menu a{
     color: hsl(0, 50%, 100%);
     text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
 }
+
+.main-menu-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+
+}
+
+.main-menu-icon {
+    width: 1.4rem;
+    display: none;
+}
+
