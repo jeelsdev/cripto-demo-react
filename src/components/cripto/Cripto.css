@@ -1,6 +1,5 @@
 .container {
     margin: auto;
-    padding: 2rem 0;
 }
 
 .cripto-container {
@@ -14,7 +13,3 @@
     text-transform: uppercase;
 }
 
-.loading {
-    font-size: medium;
-    color: hsl(0, 0%, 55%);
-}

@@ -36,7 +36,7 @@
     color: hsl(90, 90%, 50%);
 }
 
-.link {
+.link a {
     display: flex;
    justify-content: end; 
    align-items: center;
@@ -49,9 +49,10 @@
 }
 
 .link svg {
-    text-align: center;
+    text-align: end;
+    margin-bottom: 0;
     width: 1.4rem;
-    padding-right: 1rem;
+    margin: 0 1rem 0 .5rem;
 }
 
 .link:hover, .link a:hover {

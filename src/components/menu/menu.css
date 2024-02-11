@@ -1,3 +1,14 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .4s;
+    padding: 40px 100px;
+    z-index: 1000;
+    background-color: rgb(15, 23, 42);
+}
+
 .main-menu {
     padding: 16px 32px 2px 32px;
     margin: 0;
@@ -6,9 +17,45 @@
 
 .main-menu ul {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 0 2rem;
+  }
+
+  @media (min-width: 640px){
+    .main-menu ul {
+      width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .main-menu ul {
+      width: 768px;
+    }
+  }
+
+   @media (min-width: 1024px) {
+    .main-menu ul {
+      width: 1024px;
+    }
+  }
+
+   @media (min-width: 1280px) {
+    .main-menu ul {
+      width: 1280px;
+    }
+  }
+
+.right-group, .left-group {
+    display: flex;
     padding-inline-start: .2rem;
     gap: 2rem;
     list-style: none;
+}
+
+.left-group .main-menu-links a svg {
+    width: 1.5rem;
 }
 
 .main-menu a{
@@ -31,4 +78,3 @@
     width: 1.4rem;
     display: none;
 }
-

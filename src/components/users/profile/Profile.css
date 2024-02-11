@@ -1,0 +1,39 @@
+.profile {
+    width: 80%;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    border: .1rem solid hsl(0, 5%, 90%, 10%);
+    border-radius: .5rem;
+    background-color: hsl(212, 54%, 19%, 50%);
+}
+
+.profile .profile-info {
+    width: 45%;
+}
+
+.profile .profile-photo {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    width: 45%;
+}
+
+.profile .profile-photo img {
+    width: 80%;
+    border-radius: 1rem;
+}
+
+.profile .profile-info h2 {
+    color: hsl(0, 5%, 80%, 50%);
+    padding-left: 2rem;
+}
+
+.profile .profile-info h2 span {
+    color: hsl(0, 5%, 100%);
+}
+
+.profile .profile-info p {
+    padding-left: 2rem;
+}

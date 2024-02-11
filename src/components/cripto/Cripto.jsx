@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios";
 import Grid from "./Grid";
 import "./Cripto.css";
+import LoaderCircle from "../loaders/LoaderCircle";
 
 function Cripto() {
 
@@ -11,7 +12,6 @@ function Cripto() {
   useEffect(()=>{
     axios.get(`${API_URL}assets`)
     .then((data) => {
-      console.log(data)
       setCript(data.data.data);
      
     })
@@ -20,7 +20,7 @@ function Cripto() {
     })
   }, [])
 
-  if(!cript) return <span className="loading">cargando...</span>
+  if(!cript) return <LoaderCircle />
 
   return (
     <div className="container">
